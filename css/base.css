@@ -1,0 +1,72 @@
+/*for ie6*/
+html, body { position: relative; height: 100%;}
+body{
+    width:100%;
+    margin:0;
+    padding:0;
+    font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+    color: #666;
+    background: #ffffff;
+    /*font-family: Microsoft YaHei, Helvetica, STHeiti STXihei, Microsoft JhengHei, Arial;*/
+}
+div,span,h1,h2,h3,h4,h5,h6,pre,form,input,textarea,p,blockquote,th,td,frame,iframe,dt,dl,dd,a,ul,li,ol,input,button,form,option,select,label{
+    margin:0;
+    padding:0;
+    border:0;
+    text-align:left;
+    font-weight:normal;
+    color: #666;
+}
+img{
+    border:0px;
+}
+
+
+a{
+    outline:none;
+    blr:expression(this.onFocus=this.blur());
+    text-decoration: none;
+    cursor: pointer;
+}
+a:link,a:visited,a:active,a:hover{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+    color: #c81623;
+}
+input,button,select,option{
+    margin:0;
+    padding:0;
+    border:0;
+}
+ul,li,dl,dd{
+    list-style-type:none;
+}
+i,em{
+    font-style:normal;
+}
+input,button,select,textarea,form{
+    outline:none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix:after{
+    visibility:hidden;
+    display: block;
+    content:"";
+    clear: both;
+    zoom: 1;
+}
+/*color  S*/
+.red{
+    color: #c91623;
+}
+/*color  E*/
+.block{
+	display: block;
+}

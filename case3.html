@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东首页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style type="text/css">
+        .i-phmenu,.item-box{
+        	clear: both;	
+        }
+    	.i-phmenu li{
+    		float: left;
+    		margin-right: 6px;
+    	}
+    	.i-phmenu li a{
+    		display: block;
+            height: 19px;
+            line-height: 16px;
+    		padding: 0 2px;
+    		white-space: nowrap;
+    		color: #666;
+    	}
+    	.i-phmenu li a.cur{
+    		background: url("img/iframe-san.png") center 0 no-repeat;
+    		color: #fff;
+    	}
+    	.item-box{
+    		padding-top: 10px;
+    	}
+    	.input-box{
+    		margin-bottom: 10px;
+    	}
+    	.input-text{
+    		width:107px;
+    		height: 20px;
+    		line-height: 20px;
+    		border:1px #ccc solid; 
+    		margin-left: 6px;
+    		box-sizing: border-box;
+    	}
+    	.input-textp{
+    		width:50px;
+    		margin-left: 3px;
+    	}
+    	.input-textpp{
+    		width:59px;
+    	}
+    	.input-box select{
+    		color: #666;
+    	}
+    	.item-box form button{
+    		width: 67px;
+    		height: 26px;
+    		line-height: 26px;
+    		border-radius: 2px;
+    		background: #c81623;
+    		text-align: center;
+    		color: #fff;
+    		cursor: pointer;
+    	} 
+    	.hot-box{
+    		margin-top: 20px;
+    		color: #005ea7;
+    	}
+    	.hot-box span{
+    		width: 22px;
+    		height: 10px;
+    		display: inline-block;
+    		vertical-align: middle;
+    		margin-right: 8px;
+    		background: url("img/iframe-hot.png") center 0 no-repeat;
+    	}
+    	.close-box{
+			position: relative;
+			text-align: right;
+		}
+		.close-btn{
+			display: inline-block;
+		    width: 20px;
+		    height: 20px;
+		    line-height: 20px;
+		    text-align: center;
+		    font-weight: 700;
+		    cursor: pointer;
+		    margin-top: 2px;
+		}
+    </style>
+</head>
+<body>
+	<div class="iframe-main">
+		<!--<div class="close-box">
+				<a class="close-btn">×</a>
+			</div>-->
+		<ul class="i-phmenu">
+			<li><a class="cur">正在热映</a></li>
+			<li><a >即将上映</a></li>
+		</ul>
+		<div class="item-box">
+			<div class="item phone">
+				<form>
+					<div class="input-box"><label>号码</label><input class="input-text" type="text" placeholder="移动、联通、电信"/></div>
+					<div class="input-box">
+						<label>面值</label>
+						<select class="input-text">
+							<option>10</option>
+							<option>20</option>
+							<option>30</option>
+							<option>50</option>
+							<option>100</option>
+							<option>200</option>
+						</select>
+					</div>
+					<button>快速充值</button>
+				</form>
+				<div class="hot-box"><span></span>全国流量充500M送100M</div>
+			</div>
+			<div class="item phone" style="display: none;">
+				<form>
+					<div class="input-box"><label>号码</label><input class="input-text" type="text" placeholder="移动、联通、电信"/></div>
+					<div class="input-box">
+						<label>流量</label>
+						<select class="input-text input-textp">
+							<option>国内</option>
+							<option>国际</option>
+							
+						</select>
+						<select class="input-text input-textp">
+							<option>10</option>
+							<option>20</option>
+							<option>30</option>
+							<option>50</option>
+							<option>100</option>
+							<option>200</option>
+						</select>
+					</div>
+					<button>快速充值</button>
+				</form>
+				<div class="hot-box"><span></span>北京移动流量不清零</div>
+			</div>
+			<div class="item phone" style="display: none;">
+				<form>
+					<div class="input-box"><label>号码</label><input class="input-text" type="text" placeholder="支持部分地区移动"/></div>
+					<div class="input-box">
+						<label>月费</label>
+						<select class="input-text input-textpp">
+							<option>38</option>
+							<option>48</option>
+							<option>58</option>
+							<option>68</option>
+							<option>138</option>
+							<option>238</option>
+						</select>
+					</div>
+					<button>办理变更</button>
+				</form>
+				<div class="hot-box"><span></span>【白送】办4G套餐送2GB流量！</div>
+			</div>
+		</div>
+	</div>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$('.i-phmenu li').mouseover(function() {
+		var $lis = $('.i-phmenu li');
+		var $boxs = $('.iframe-main .item');
+		var index = $(this).index();
+		$(this).children().addClass('cur').parent().siblings().children().removeClass('cur');
+		$boxs.eq(index).show().siblings().hide();
+	});
+</script>
+</body>
